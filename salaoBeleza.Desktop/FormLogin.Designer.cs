@@ -61,6 +61,7 @@
             txtSenha.Font = new Font("Segoe UI", 12F);
             txtSenha.Location = new Point(2, 201);
             txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(361, 39);
             txtSenha.TabIndex = 3;
             // 
@@ -74,7 +75,6 @@
             lblTitulo.Size = new Size(315, 54);
             lblTitulo.TabIndex = 4;
             lblTitulo.Text = "Salão de Beleza";
-            lblTitulo.Click += this.IblTitulo_Click;
             // 
             // lblEmail
             // 
@@ -86,7 +86,6 @@
             lblEmail.Size = new Size(83, 38);
             lblEmail.TabIndex = 5;
             lblEmail.Text = "Email";
-            lblEmail.Click += this.label1_Click;
             // 
             // lblSenh
             // 
