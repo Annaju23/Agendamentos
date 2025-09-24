@@ -6,5 +6,10 @@ namespace salaoBeleza.Desktop
         {
             InitializeComponent();
         }
+
+        private void CadastrarUsuarios(object sender, EventArgs e)
+        {
+            new FormCadatros().ShowDialog();
+        }
     }
 }

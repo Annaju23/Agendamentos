@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             barraTopo = new Panel();
-            label1 = new Label();
             btnVoltar = new Button();
+            label1 = new Label();
             pnlFormulario = new Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            label2 = new Label();
-            txtNome = new TextBox();
-            flowLayoutPanel2 = new FlowLayoutPanel();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            flowLayoutPanel3 = new FlowLayoutPanel();
-            label4 = new Label();
-            textBox2 = new TextBox();
             flowLayoutPanel4 = new FlowLayoutPanel();
             label5 = new Label();
             textBox3 = new TextBox();
+            flowLayoutPanel3 = new FlowLayoutPanel();
+            label4 = new Label();
+            textBox2 = new TextBox();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            label2 = new Label();
+            txtNome = new TextBox();
             btnCadastrar = new Button();
             barraTopo.SuspendLayout();
             pnlFormulario.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
-            flowLayoutPanel2.SuspendLayout();
-            flowLayoutPanel3.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
+            flowLayoutPanel3.SuspendLayout();
+            flowLayoutPanel2.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // barraTopo
@@ -62,6 +62,17 @@
             barraTopo.Name = "barraTopo";
             barraTopo.Size = new Size(484, 100);
             barraTopo.TabIndex = 0;
+            // 
+            // btnVoltar
+            // 
+            btnVoltar.Font = new Font("Segoe UI", 12F);
+            btnVoltar.Location = new Point(369, 39);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(112, 34);
+            btnVoltar.TabIndex = 2;
+            btnVoltar.Text = "voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += FecharCadastro;
             // 
             // label1
             // 
@@ -75,16 +86,6 @@
             label1.Text = "Salão de Beleza";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // btnVoltar
-            // 
-            btnVoltar.Font = new Font("Segoe UI", 12F);
-            btnVoltar.Location = new Point(369, 39);
-            btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(112, 34);
-            btnVoltar.TabIndex = 2;
-            btnVoltar.Text = "voltar";
-            btnVoltar.UseVisualStyleBackColor = true;
-            // 
             // pnlFormulario
             // 
             pnlFormulario.AutoSize = true;
@@ -97,103 +98,6 @@
             pnlFormulario.Name = "pnlFormulario";
             pnlFormulario.Size = new Size(484, 380);
             pnlFormulario.TabIndex = 3;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Controls.Add(label2);
-            flowLayoutPanel1.Controls.Add(txtNome);
-            flowLayoutPanel1.Dock = DockStyle.Top;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Font = new Font("Segoe UI", 12F);
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Margin = new Padding(0, 0, 0, 16);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(484, 95);
-            flowLayoutPanel1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label2.Location = new Point(3, 0);
-            label2.Margin = new Padding(3, 0, 3, 8);
-            label2.Name = "label2";
-            label2.Size = new Size(198, 32);
-            label2.TabIndex = 3;
-            label2.Text = "Nome completo";
-            // 
-            // txtNome
-            // 
-            txtNome.Location = new Point(0, 40);
-            txtNome.Margin = new Padding(0, 0, 0, 16);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(484, 39);
-            txtNome.TabIndex = 4;
-            // 
-            // flowLayoutPanel2
-            // 
-            flowLayoutPanel2.Controls.Add(label3);
-            flowLayoutPanel2.Controls.Add(textBox1);
-            flowLayoutPanel2.Dock = DockStyle.Top;
-            flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel2.Font = new Font("Segoe UI", 12F);
-            flowLayoutPanel2.Location = new Point(0, 95);
-            flowLayoutPanel2.Margin = new Padding(0, 0, 0, 16);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(484, 95);
-            flowLayoutPanel2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label3.Location = new Point(3, 0);
-            label3.Margin = new Padding(3, 0, 3, 8);
-            label3.Name = "label3";
-            label3.Size = new Size(76, 32);
-            label3.TabIndex = 3;
-            label3.Text = "Email";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(0, 40);
-            textBox1.Margin = new Padding(0, 0, 0, 16);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(484, 39);
-            textBox1.TabIndex = 4;
-            // 
-            // flowLayoutPanel3
-            // 
-            flowLayoutPanel3.Controls.Add(label4);
-            flowLayoutPanel3.Controls.Add(textBox2);
-            flowLayoutPanel3.Dock = DockStyle.Top;
-            flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel3.Font = new Font("Segoe UI", 12F);
-            flowLayoutPanel3.Location = new Point(0, 190);
-            flowLayoutPanel3.Margin = new Padding(0, 0, 0, 16);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(484, 95);
-            flowLayoutPanel3.TabIndex = 4;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label4.Location = new Point(3, 0);
-            label4.Margin = new Padding(3, 0, 3, 8);
-            label4.Name = "label4";
-            label4.Size = new Size(82, 32);
-            label4.TabIndex = 3;
-            label4.Text = "Senha";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(0, 40);
-            textBox2.Margin = new Padding(0, 0, 0, 16);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(484, 39);
-            textBox2.TabIndex = 4;
             // 
             // flowLayoutPanel4
             // 
@@ -228,6 +132,103 @@
             textBox3.Size = new Size(484, 39);
             textBox3.TabIndex = 4;
             // 
+            // flowLayoutPanel3
+            // 
+            flowLayoutPanel3.Controls.Add(label4);
+            flowLayoutPanel3.Controls.Add(textBox2);
+            flowLayoutPanel3.Dock = DockStyle.Top;
+            flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel3.Font = new Font("Segoe UI", 12F);
+            flowLayoutPanel3.Location = new Point(0, 190);
+            flowLayoutPanel3.Margin = new Padding(0, 0, 0, 16);
+            flowLayoutPanel3.Name = "flowLayoutPanel3";
+            flowLayoutPanel3.Size = new Size(484, 95);
+            flowLayoutPanel3.TabIndex = 4;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label4.Location = new Point(3, 0);
+            label4.Margin = new Padding(3, 0, 3, 8);
+            label4.Name = "label4";
+            label4.Size = new Size(82, 32);
+            label4.TabIndex = 3;
+            label4.Text = "Senha";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(0, 40);
+            textBox2.Margin = new Padding(0, 0, 0, 16);
+            textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
+            textBox2.Size = new Size(484, 39);
+            textBox2.TabIndex = 4;
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.Controls.Add(label3);
+            flowLayoutPanel2.Controls.Add(textBox1);
+            flowLayoutPanel2.Dock = DockStyle.Top;
+            flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel2.Font = new Font("Segoe UI", 12F);
+            flowLayoutPanel2.Location = new Point(0, 95);
+            flowLayoutPanel2.Margin = new Padding(0, 0, 0, 16);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(484, 95);
+            flowLayoutPanel2.TabIndex = 3;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label3.Location = new Point(3, 0);
+            label3.Margin = new Padding(3, 0, 3, 8);
+            label3.Name = "label3";
+            label3.Size = new Size(76, 32);
+            label3.TabIndex = 3;
+            label3.Text = "Email";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(0, 40);
+            textBox1.Margin = new Padding(0, 0, 0, 16);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(484, 39);
+            textBox1.TabIndex = 4;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(label2);
+            flowLayoutPanel1.Controls.Add(txtNome);
+            flowLayoutPanel1.Dock = DockStyle.Top;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Font = new Font("Segoe UI", 12F);
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Margin = new Padding(0, 0, 0, 16);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(484, 95);
+            flowLayoutPanel1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.Location = new Point(3, 0);
+            label2.Margin = new Padding(3, 0, 3, 8);
+            label2.Name = "label2";
+            label2.Size = new Size(198, 32);
+            label2.TabIndex = 3;
+            label2.Text = "Nome completo";
+            // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(0, 40);
+            txtNome.Margin = new Padding(0, 0, 0, 16);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(484, 39);
+            txtNome.TabIndex = 4;
+            // 
             // btnCadastrar
             // 
             btnCadastrar.AutoSize = true;
@@ -254,14 +255,14 @@
             Text = "FornCadatros";
             barraTopo.ResumeLayout(false);
             pnlFormulario.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
-            flowLayoutPanel2.ResumeLayout(false);
-            flowLayoutPanel2.PerformLayout();
-            flowLayoutPanel3.ResumeLayout(false);
-            flowLayoutPanel3.PerformLayout();
             flowLayoutPanel4.ResumeLayout(false);
             flowLayoutPanel4.PerformLayout();
+            flowLayoutPanel3.ResumeLayout(false);
+            flowLayoutPanel3.PerformLayout();
+            flowLayoutPanel2.ResumeLayout(false);
+            flowLayoutPanel2.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

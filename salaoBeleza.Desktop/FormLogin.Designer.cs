@@ -35,6 +35,7 @@
             lblEmail = new Label();
             lblSenh = new Label();
             chkLembrar = new CheckBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnEntrar
@@ -110,12 +111,26 @@
             chkLembrar.Text = "Lembrar-me";
             chkLembrar.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            button1.AutoSize = true;
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.ForeColor = Color.FromArgb(64, 0, 64);
+            button1.Location = new Point(194, 325);
+            button1.Name = "button1";
+            button1.Size = new Size(123, 42);
+            button1.TabIndex = 8;
+            button1.Text = "Cadastrar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += CadastrarUsuarios;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Thistle;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(chkLembrar);
             Controls.Add(lblSenh);
             Controls.Add(lblEmail);
@@ -140,5 +155,6 @@
         private Label lblEmail;
         private Label lblSenh;
         private CheckBox chkLembrar;
+        private Button button1;
     }
 }

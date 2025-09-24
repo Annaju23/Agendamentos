@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace salaoBeleza.Desktop
 {
-    public partial class FormCadatros: Form
+    public partial class FormCadatros : Form
     {
         public FormCadatros()
         {
             InitializeComponent();
+        }
+
+        private void FecharCadastro(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
