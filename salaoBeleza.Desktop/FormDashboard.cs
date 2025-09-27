@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace salaoBeleza.Desktop
 {
-    public partial class FormDashboard: Form
+    public partial class FormDashboard : Form
     {
         public FormDashboard()
         {
             InitializeComponent();
+        }
+
+        private void pnlAgendar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblSub_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
