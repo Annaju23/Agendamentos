@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             tblDivisao = new TableLayoutPanel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            lblAgendamentos = new Label();
+            lblSubAgendamentos = new Label();
             pnlAgendar = new Panel();
             tblFormulario = new TableLayoutPanel();
             lblServico = new Label();
@@ -40,13 +43,12 @@
             lblSub = new Label();
             lblTitulo = new Label();
             btnAgendar = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            lblAgendamentos = new Label();
-            lblSubAgendamentos = new Label();
+            dgvDados = new DataGridView();
             tblDivisao.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             pnlAgendar.SuspendLayout();
             tblFormulario.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDados).BeginInit();
             SuspendLayout();
             // 
             // tblDivisao
@@ -65,6 +67,42 @@
             tblDivisao.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tblDivisao.Size = new Size(873, 399);
             tblDivisao.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(lblAgendamentos);
+            flowLayoutPanel1.Controls.Add(lblSubAgendamentos);
+            flowLayoutPanel1.Controls.Add(dgvDados);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(273, 0);
+            flowLayoutPanel1.Margin = new Padding(12, 0, 0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Padding = new Padding(20);
+            flowLayoutPanel1.Size = new Size(600, 379);
+            flowLayoutPanel1.TabIndex = 7;
+            // 
+            // lblAgendamentos
+            // 
+            lblAgendamentos.AutoSize = true;
+            lblAgendamentos.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblAgendamentos.ForeColor = Color.White;
+            lblAgendamentos.Location = new Point(23, 20);
+            lblAgendamentos.Name = "lblAgendamentos";
+            lblAgendamentos.Size = new Size(190, 25);
+            lblAgendamentos.TabIndex = 0;
+            lblAgendamentos.Text = "Seus agendamentos";
+            // 
+            // lblSubAgendamentos
+            // 
+            lblSubAgendamentos.AutoSize = true;
+            lblSubAgendamentos.Font = new Font("Segoe UI", 11F);
+            lblSubAgendamentos.ForeColor = Color.FromArgb(152, 149, 157);
+            lblSubAgendamentos.Location = new Point(23, 45);
+            lblSubAgendamentos.Name = "lblSubAgendamentos";
+            lblSubAgendamentos.Size = new Size(305, 20);
+            lblSubAgendamentos.TabIndex = 1;
+            lblSubAgendamentos.Text = "consulte a baixo seus ultimos agendamentos";
             // 
             // pnlAgendar
             // 
@@ -214,40 +252,14 @@
             btnAgendar.Text = "Agendar horário";
             btnAgendar.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel1
+            // dgvDados
             // 
-            flowLayoutPanel1.Controls.Add(lblAgendamentos);
-            flowLayoutPanel1.Controls.Add(lblSubAgendamentos);
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(273, 0);
-            flowLayoutPanel1.Margin = new Padding(12, 0, 0, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Padding = new Padding(20);
-            flowLayoutPanel1.Size = new Size(600, 379);
-            flowLayoutPanel1.TabIndex = 7;
-            // 
-            // lblAgendamentos
-            // 
-            lblAgendamentos.AutoSize = true;
-            lblAgendamentos.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblAgendamentos.ForeColor = Color.White;
-            lblAgendamentos.Location = new Point(23, 20);
-            lblAgendamentos.Name = "lblAgendamentos";
-            lblAgendamentos.Size = new Size(190, 25);
-            lblAgendamentos.TabIndex = 0;
-            lblAgendamentos.Text = "Seus agendamentos";
-            // 
-            // lblSubAgendamentos
-            // 
-            lblSubAgendamentos.AutoSize = true;
-            lblSubAgendamentos.Font = new Font("Segoe UI", 11F);
-            lblSubAgendamentos.ForeColor = Color.FromArgb(152, 149, 157);
-            lblSubAgendamentos.Location = new Point(23, 45);
-            lblSubAgendamentos.Name = "lblSubAgendamentos";
-            lblSubAgendamentos.Size = new Size(305, 20);
-            lblSubAgendamentos.TabIndex = 1;
-            lblSubAgendamentos.Text = "consulte a baixo seus ultimos agendamentos";
+            dgvDados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDados.Location = new Point(23, 68);
+            dgvDados.Name = "dgvDados";
+            dgvDados.Size = new Size(305, 288);
+            dgvDados.TabIndex = 2;
             // 
             // FormDashboard
             // 
@@ -262,12 +274,13 @@
             Padding = new Padding(6, 5, 6, 5);
             Text = "Salão de Beleza-Agendamento";
             tblDivisao.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             pnlAgendar.ResumeLayout(false);
             pnlAgendar.PerformLayout();
             tblFormulario.ResumeLayout(false);
             tblFormulario.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDados).EndInit();
             ResumeLayout(false);
         }
 
@@ -288,5 +301,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Label lblAgendamentos;
         private Label lblSubAgendamentos;
+        private DataGridView dgvDados;
     }
 }
