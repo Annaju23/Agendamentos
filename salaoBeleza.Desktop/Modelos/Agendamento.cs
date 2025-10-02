@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace salaoBeleza.Desktop.Modelos;
 
-internal class Agendamentos
+internal class Agendamento
 {
     public  int id {  get; set; }
     public int ServicoId { get; set; }
