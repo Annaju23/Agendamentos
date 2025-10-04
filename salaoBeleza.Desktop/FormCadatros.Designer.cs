@@ -67,10 +67,10 @@
             // btnVoltar
             // 
             btnVoltar.Font = new Font("Segoe UI", 12F);
-            btnVoltar.Location = new Point(258, 22);
+            btnVoltar.Location = new Point(258, 17);
             btnVoltar.Margin = new Padding(2);
             btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(78, 25);
+            btnVoltar.Size = new Size(78, 30);
             btnVoltar.TabIndex = 2;
             btnVoltar.Text = "voltar";
             btnVoltar.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@
             pnlFormulario.Location = new Point(6, 65);
             pnlFormulario.Margin = new Padding(2);
             pnlFormulario.Name = "pnlFormulario";
-            pnlFormulario.Size = new Size(338, 228);
+            pnlFormulario.Size = new Size(338, 260);
             pnlFormulario.TabIndex = 3;
             // 
             // flowLayoutPanel4
@@ -110,10 +110,10 @@
             flowLayoutPanel4.Dock = DockStyle.Top;
             flowLayoutPanel4.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel4.Font = new Font("Segoe UI", 12F);
-            flowLayoutPanel4.Location = new Point(0, 171);
+            flowLayoutPanel4.Location = new Point(0, 195);
             flowLayoutPanel4.Margin = new Padding(0, 0, 0, 10);
             flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(338, 57);
+            flowLayoutPanel4.Size = new Size(338, 65);
             flowLayoutPanel4.TabIndex = 5;
             // 
             // label5
@@ -129,7 +129,7 @@
             // 
             // txtComfimacao
             // 
-            txtComfimacao.Location = new Point(142, 0);
+            txtComfimacao.Location = new Point(0, 26);
             txtComfimacao.Margin = new Padding(0, 0, 0, 10);
             txtComfimacao.Name = "txtComfimacao";
             txtComfimacao.PasswordChar = '*';
@@ -143,10 +143,10 @@
             flowLayoutPanel3.Dock = DockStyle.Top;
             flowLayoutPanel3.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel3.Font = new Font("Segoe UI", 12F);
-            flowLayoutPanel3.Location = new Point(0, 114);
+            flowLayoutPanel3.Location = new Point(0, 130);
             flowLayoutPanel3.Margin = new Padding(0, 0, 0, 10);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(338, 57);
+            flowLayoutPanel3.Size = new Size(338, 65);
             flowLayoutPanel3.TabIndex = 4;
             // 
             // label4
@@ -162,7 +162,7 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(61, 0);
+            txtSenha.Location = new Point(0, 26);
             txtSenha.Margin = new Padding(0, 0, 0, 10);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '*';
@@ -176,10 +176,10 @@
             flowLayoutPanel2.Dock = DockStyle.Top;
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Font = new Font("Segoe UI", 12F);
-            flowLayoutPanel2.Location = new Point(0, 57);
+            flowLayoutPanel2.Location = new Point(0, 65);
             flowLayoutPanel2.Margin = new Padding(0, 0, 0, 10);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(338, 57);
+            flowLayoutPanel2.Size = new Size(338, 65);
             flowLayoutPanel2.TabIndex = 3;
             // 
             // label3
@@ -195,7 +195,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(57, 0);
+            txtEmail.Location = new Point(0, 26);
             txtEmail.Margin = new Padding(0, 0, 0, 10);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(340, 29);
@@ -211,7 +211,7 @@
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Margin = new Padding(0, 0, 0, 10);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(338, 57);
+            flowLayoutPanel1.Size = new Size(338, 65);
             flowLayoutPanel1.TabIndex = 2;
             // 
             // label2
@@ -227,7 +227,7 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(138, 0);
+            txtNome.Location = new Point(0, 26);
             txtNome.Margin = new Padding(0, 0, 0, 10);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(340, 29);
@@ -237,13 +237,14 @@
             // 
             btnCadastrar.AutoSize = true;
             btnCadastrar.Font = new Font("Segoe UI", 12F);
-            btnCadastrar.Location = new Point(123, 358);
+            btnCadastrar.Location = new Point(129, 352);
             btnCadastrar.Margin = new Padding(2);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(87, 31);
             btnCadastrar.TabIndex = 5;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += CadastroUsuario;
             // 
             // FormCadatros
             // 

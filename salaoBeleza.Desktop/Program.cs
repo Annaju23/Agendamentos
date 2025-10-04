@@ -1,4 +1,4 @@
-namespace salaoBeleza.Desktop
+namespace salaoBeleza.Desktop 
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace salaoBeleza.Desktop
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormDashboard());
+            Application.Run(new FormLogin());
         }
     }
 }

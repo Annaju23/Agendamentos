@@ -19,20 +19,10 @@ internal class UsuarioServicos
     // Criar um metodo public AdicionarUsuario que recebe um parametro do tipo Usuario. 
     public void AdicionarUsuario(Usuario usuario)
     {
-        try
-        {
-            _context.Usuarios.Add(usuario);
-            _context.SaveChanges();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            MessageBox.Show("Usuario não pode ser salvo no banco de dados");
-        }
-        catch (DbUpdateException)
-        {
-            MessageBox.Show("Erro ao salvar informações de banco de dados"); 
-        }
+        _context.Usuarios.Add(usuario);
+        _context.SaveChanges();
+        MessageBox.Show("Usuario adicionado com sucesso.", "Sucesso no cadastro");
     }
-    
+
 }
 
