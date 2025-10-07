@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace salaoBeleza.Desktop.Modelos;
 
-internal class Usuario
+public class Usuario
 {
     public int id { get; set; }
     public string NomeCompleto { get; set; }

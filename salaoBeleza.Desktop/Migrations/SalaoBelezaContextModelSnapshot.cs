@@ -8,115 +8,114 @@ using salaoBeleza.Desktop.Banco_de_Dados;
 
 #nullable disable
 
-namespace salaoBeleza.Desktop.Migrations
+namespace salaoBeleza.Desktop.Migrations;
+
+[DbContext(typeof(SalaoBelezaContext))]
+partial class SalaoBelezaContextModelSnapshot : ModelSnapshot
 {
-    [DbContext(typeof(SalaoBelezaContext))]
-    partial class SalaoBelezaContextModelSnapshot : ModelSnapshot
+    protected override void BuildModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.9")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+        modelBuilder
+            .HasAnnotation("ProductVersion", "9.0.9")
+            .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
+        MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("salaoBeleza.Desktop.Modelos.Agendamentos", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+        modelBuilder.Entity("salaoBeleza.Desktop.Modelos.Agendamentos", b =>
+            {
+                b.Property<int>("id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
+                MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<DateTime>("AgendamentoEm")
-                        .HasColumnType("datetime(6)");
+                b.Property<DateTime>("AgendamentoEm")
+                    .HasColumnType("datetime(6)");
 
-                    b.Property<int>("ServicoId")
-                        .HasColumnType("int");
+                b.Property<int>("ServicoId")
+                    .HasColumnType("int");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
+                b.Property<int>("UsuarioId")
+                    .HasColumnType("int");
 
-                    b.Property<int>("funcionarioId")
-                        .HasColumnType("int");
+                b.Property<int>("funcionarioId")
+                    .HasColumnType("int");
 
-                    b.HasKey("id");
+                b.HasKey("id");
 
-                    b.ToTable("Agendamentos");
-                });
+                b.ToTable("Agendamentos");
+            });
 
-            modelBuilder.Entity("salaoBeleza.Desktop.Modelos.Usuario", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+        modelBuilder.Entity("salaoBeleza.Desktop.Modelos.Usuario", b =>
+            {
+                b.Property<int>("id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
+                MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(13)
-                        .HasColumnType("varchar(13)");
+                b.Property<string>("Discriminator")
+                    .IsRequired()
+                    .HasMaxLength(13)
+                    .HasColumnType("varchar(13)");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Email")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("NomeCompleto")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("NomeCompleto")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("Senha")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Senha")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.HasKey("id");
+                b.HasKey("id");
 
-                    b.ToTable("Usuarios");
+                b.ToTable("Usuarios");
 
-                    b.HasDiscriminator().HasValue("Usuario");
+                b.HasDiscriminator().HasValue("Usuario");
 
-                    b.UseTphMappingStrategy();
-                });
+                b.UseTphMappingStrategy();
+            });
 
-            modelBuilder.Entity("salaoBeleza.Desktop.Modelos.servico", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+        modelBuilder.Entity("salaoBeleza.Desktop.Modelos.servico", b =>
+            {
+                b.Property<int>("id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
+                MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Nome")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("descricao")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("descricao")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.Property<string>("preco")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("preco")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.HasKey("id");
+                b.HasKey("id");
 
-                    b.ToTable("Servicos");
-                });
+                b.ToTable("Servicos");
+            });
 
-            modelBuilder.Entity("salaoBeleza.Desktop.Modelos.Funcionarios", b =>
-                {
-                    b.HasBaseType("salaoBeleza.Desktop.Modelos.Usuario");
+        modelBuilder.Entity("salaoBeleza.Desktop.Modelos.Funcionarios", b =>
+            {
+                b.HasBaseType("salaoBeleza.Desktop.Modelos.Usuario");
 
-                    b.Property<string>("Cargo")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                b.Property<string>("Cargo")
+                    .IsRequired()
+                    .HasColumnType("longtext");
 
-                    b.HasDiscriminator().HasValue("Funcionarios");
-                });
+                b.HasDiscriminator().HasValue("Funcionarios");
+            });
 #pragma warning restore 612, 618
-        }
     }
 }

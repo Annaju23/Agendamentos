@@ -1,17 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using salaoBeleza.Desktop.Banco_de_Dados;
+﻿using salaoBeleza.Desktop.Banco_de_Dados;
 using salaoBeleza.Desktop.Modelos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace salaoBeleza.Desktop.Servicos;
 
 internal class UsuarioServicos
 {
     private SalaoBelezaContext _context;
+
     public UsuarioServicos(SalaoBelezaContext context)
     {
         _context = context;
@@ -24,5 +19,18 @@ internal class UsuarioServicos
         MessageBox.Show("Usuario adicionado com sucesso.", "Sucesso no cadastro");
     }
 
+    public Usuario ObterUsuario(string email, string senha)
+    {
+        Usuario? usuario  = _context.Usuarios.FirstOrDefault(u => u.Email.Equals(email));
+        if (usuario == null)
+        {
+           throw new Exception ("Usuario não foi encontrado!");
+        }
+        if (!usuario.Senha.Equals(senha))
+        {
+            throw new Exception("Email ou senha estão errados!");
+        }
+        return usuario;
+    }
 }
 
