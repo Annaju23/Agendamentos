@@ -1,7 +1,7 @@
 ﻿
 namespace Agendamentos.Biblioteca;
 
-internal class Client : User
+public class Client : User
 {
     public bool CanReceiveEmail { get; set; } = false;
 
