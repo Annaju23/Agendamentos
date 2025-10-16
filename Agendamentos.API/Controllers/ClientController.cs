@@ -19,7 +19,7 @@ public class ClientController : ControllerBase
     {
         return Ok(new
         {
-            Message = id
+            Message = id 
         });
     }
 }

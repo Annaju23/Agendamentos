@@ -1,6 +1,6 @@
 ﻿namespace Agendamentos.Biblioteca;
 
-internal class Employee : User
+public class Employee : User
 {
     public Employee(string name, string email, string phone, DateOnly birth, string password, Role role) : base(name, email, phone, birth)
     {
@@ -16,6 +16,6 @@ internal class Employee : User
 
     public string Password { get; set; }
     public  Role Role { get; set; }
-
+    public int RoleID { get; set; }
     
 }

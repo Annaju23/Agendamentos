@@ -2,7 +2,7 @@
 
 namespace Agendamentos.Biblioteca;
 
-internal class Appointment
+public class Appointment
 {
     public int id { get; set; }
     public int Client { get; set; }
