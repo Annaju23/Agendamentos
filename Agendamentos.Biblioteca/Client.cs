@@ -4,6 +4,7 @@ namespace Agendamentos.Biblioteca;
 public class Client : User
 {
     public bool CanReceiveEmail { get; set; } = false;
+    public List<Appointment> Appointments { get; set; } 
 
     public Client() : base() { }
 

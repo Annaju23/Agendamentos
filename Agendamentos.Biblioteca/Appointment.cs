@@ -5,8 +5,8 @@ namespace Agendamentos.Biblioteca;
 public class Appointment
 {
     public int id { get; set; }
-    public int Client { get; set; }
-    public Client ClientID { get; set; }
+    public Client Client { get; set; }
+    public int ClientID { get; set; }
     public int EmployeeID { get; set; }
     public Employee Employee { get; set; }
     public int ServiceID { get; set; }
@@ -15,11 +15,12 @@ public class Appointment
 
     public Appointment(Client client, Employee employee, Service service, DateTime scheduledAt)
     {
-       this.ClientID = client;
+       this.Client = client;
        this.Employee = employee;
        this.Service = service;
        this.ScheduledAt = scheduledAt;
     }
+    public Appointment() { }    
     
     public Appointment( Client client, Employee employee, Service service, DateTime scheduledAt, int id): this(client, employee, service, scheduledAt)
     {

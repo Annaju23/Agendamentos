@@ -12,7 +12,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        string connectionString = Environment.GetEnvironmentVariable("MYSQL_URI")!;
+        string connectionString = builder.Configuration.GetConnectionString("MYSQL_URI")!;
 
         builder.Services.AddControllers();
         builder.Services.AddDbContext<APIContext>(optionsBuilder => optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));

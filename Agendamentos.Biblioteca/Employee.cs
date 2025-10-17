@@ -17,5 +17,6 @@ public class Employee : User
     public string Password { get; set; }
     public  Role Role { get; set; }
     public int RoleID { get; set; }
+    public List<Appointment> Appointments { get; set; }
     
 }

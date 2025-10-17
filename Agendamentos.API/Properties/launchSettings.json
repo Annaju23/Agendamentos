@@ -26,8 +26,7 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7199;http://localhost:5217",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "MYSQL_ENVIRONMENT": "server=localhost; user=root;password=;database=agendamentos"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "IIS Express": {
