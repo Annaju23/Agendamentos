@@ -10,6 +10,11 @@ public class Address
     public string City { get; set; }
     public string ZIPCode { get; set; }
 
+    public Address()
+    {
+        
+    }
+
     public Address(string street, string number, string neighborhood, string city, string zipCode)
     {
         this.Street = street;

@@ -1,4 +1,5 @@
-﻿using Agendamentos.Biblioteca;
+﻿using Agendamentos.API.Database;
+using Agendamentos.Biblioteca;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,20 +7,42 @@ namespace Agendamentos.API.Controllers;
 
 [Route("[controller]")] // Anotação para definir a rota do controlador
 [ApiController]
-public class ClientController : ControllerBase
+public class ClientController(APIContext context): ControllerBase
 {
+    private APIContext _context = context;
     [HttpPost]
-    public IActionResult RegisterClient([FromBody]Client request)
+    public async Task<IActionResult> RegisterClientAsync([FromBody]Client request)
     {
-        return Created();
+        await _context.Clients.AddAsync(request);
+        _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetClientByIDAsync), new { id = request.ID });
     }
 
     [HttpGet("{id}")] 
-    public IActionResult GetClientByID(int id)
+    public async Task <IActionResult> GetClientByIDAsync(int id)
     {
-        return Ok(new
-        {
-            Message = id 
-        });
+        //Vai procurar o cliente pelo id aqui
+        // _context.Clients.Find()
+        //Se não tiver usuario 404 Not Found
+        Client? result = await _context.Clients.FindAsync(id);
+        if (result is null) return NotFound("Cliente não foi encontrado!");
+        return Ok(result);  
+
     }
+    [HttpPut]
+    public async Task <IActionResult> UpdateClientAsync([FromBody] Client request)
+    {
+        if (request.ID == null) return BadRequest();
+        Client? result = await _context.Clients.FindAsync(request.ID);
+        if (result == null) return NotFound();
+
+        _context.Clients.Update(request);
+        await _context.SaveChangesAsync();
+        return Ok();
+
+    }
+     // Crie os metodos abaixo com melhor retorno aplicavel
+    //HTTP PUT 200 OK | 204 no content UpdateClientAsync()
+    //HTTP PATCH 204 no content | 200 OK ToggleEmailFromClientIdAsync
+    //DELETE 204 no content DeleteClienteByIdAsync()
 }
