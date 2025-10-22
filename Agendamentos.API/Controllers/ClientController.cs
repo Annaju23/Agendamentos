@@ -67,7 +67,4 @@ public class ClientController(APIContext context) : ControllerBase
         return NoContent();
     }
 
-
-
-
 }
