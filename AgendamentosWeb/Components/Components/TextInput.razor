@@ -1,9 +1,11 @@
 ﻿<div>
-	<i>👩🏽😊</i>
+	@IconContent
 	<input type="text" placeholder="@Placeholder" />
 </div>
 
 @code {
+	[Parameter]
+	public RenderFragment? IconContent { get; set; }
 	[Parameter]
 	public string? Placeholder { get; set; }
 }

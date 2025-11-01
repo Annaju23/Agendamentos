@@ -2,9 +2,38 @@
 
 <PageTitle>Agendamentos</PageTitle>
 
-<h1>Sistemas de Agendamentos</h1>
+<div id="container">
+	<div id="schedule">
+		<div id="title">
+			<h1 class="title_lg gray-100"> Agende um atendimento</h1>
+			<p class="text_sm gray-300">Selecione data, horário e informe o nome do cliente para criar o agendamento</p>
+		</div>
 
-<p>Bem vindo ao sistema de agendamentos. Aqui você poderá agendar os horários para seus clientes, gerenciar seus serviços e funcionários. Além de ter uma facilidade na transferência de informações entre pessoas.</p>
+		<div id="form">
+			<div id="date"></div>
+			<h1 class="title_md gray-200">Data</h1>
+			<TextInput></TextInput>
 
-<Button Text ="Agendar"></Button>
-<TextInput></TextInput>
+			<div id="time"></div>
+			<h1 class=" title_md gray-200">Horário</h1>
+			<TextInput></TextInput>
+
+			<div id="Client">
+				<h1 class="title_md gray-200">Cliente</h1>
+				<TextInput Placeholder="Nome do cliente">
+					<IconContent>
+						<AccountBox></AccountBox>
+					</IconContent>
+				</TextInput>
+
+			</div>
+
+		</div>
+
+		<Button Text="Agendar"></Button>
+	</div>
+
+	<div id="appointments">
+	</div>
+
+</div>
